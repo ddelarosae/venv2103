@@ -1,0 +1,29 @@
+<html>
+    <head>
+        {% if titulo %}
+            <title>{{ titulo }} - ABC</title>
+        {% else %}
+            <title>ABC</title>
+        {% endif %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/miEstilo.css') }}"/>
+    </head>
+    <body>
+        <div>ABC: 
+            <a href="/index">Inicio</a>
+            <a href="/login">Iniciar Sesión</a>
+        </div>
+        <hr>
+        {% with mensajes = get_flashed_messages() %}
+        {% if mensajes %}
+            <ul>
+                {% for mensaje in mensajes %}
+                    <li>{{ mensaje }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+        {% block contenido %}
+        <h1>Gracias por iniciar</h1>
+        {% endblock %}
+    </body>
+</html>
