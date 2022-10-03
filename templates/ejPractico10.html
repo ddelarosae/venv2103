@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.usuario.label }}<br>
+            {{ form.usuario(size=40)}}<br>
+        </p>
+        <p>
+            {{ form.correo.label }}<br>
+            {{ form.correo(size=40) }}<br>
+        </p>
+        <p>
+            {{ form.mensaje.label }}
+            {{ form.mensaje(size=40) }}<br>
+        </p>
+        <p>{{ form.enviar() }}</p>
+    </form>
+</body>
+</html>
