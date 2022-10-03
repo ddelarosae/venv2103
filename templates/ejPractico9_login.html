@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de sesion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/miEstilo.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+</head>
+<body>
+    <h1>Inicio de sesion</h1>
+    <form name="login" method="post" action="{{url_for('login')}}" >
+        <div>
+            <label for="username">Usuario</label>
+            <input name="username" id="username" type="text">
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input name="password" id="password" type="password">
+        </div>
+        <input type="submit" value="Iniciar sesion"/>
+    </form>
+</body>
+</html>
