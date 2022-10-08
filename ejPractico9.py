@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, jsonify
+from flask import Flask, render_template, request, flash, jsonify,json
 import utils
 import yagmail
 import os
@@ -19,7 +19,7 @@ def mensajes():
 def login():
         try:
             if request.method == 'POST':
-                return jsonify(mensaje)
+                return json.dumps(mensaje)
         except:
             return render_template('error.html') 
 @app.route('/sesion',methods=('GET','POST'))

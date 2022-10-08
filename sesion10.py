@@ -5,12 +5,7 @@ app.config['SECRET_KEY'] = 'C2HWGVoMGfNTBsrYQg8EcMrdTimkZfAb'
 @app.route('/')
 @app.route('/index')
 def index():
-    usuario = {'usuario':'...'}
-    comentarios = [
-        {'autor':{'usuario':'...'}, 'comentario':'...'},
-        {'autor':{'usuario':'...'}, 'comentario':'...'}
-    ]
-    return render_template('base.html', titulo='Inicio', usuario=usuario, comentarios=comentarios)
+    return render_template('base.html', titulo='Inicio')
 @app.route('/login',methods=['GET', 'POST'])
 def login():
     form = FormInicio()

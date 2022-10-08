@@ -8,6 +8,16 @@ h1{
     border-radius:10px;
     margin: 0 auto;
 }
+h2{
+    font-family:serif;
+    text-align: center;
+    color: #377ba8;
+    background-color:lightblue;
+    width:350px;
+    padding:16px;
+    border-radius:10px;
+    margin: 0 auto;
+}
 form{
     width:350px;
     padding:16px;
@@ -24,4 +34,8 @@ button{
 }
 img{
     height: 20px;
+}
+tr{
+    background-color: #377ba8;
+    color: white;
 }
